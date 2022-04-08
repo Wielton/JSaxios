@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/app.js" defer></script>
     <title>JS Axios Assignment || Week 12B</title>
 </head>
-<body>
-    
+<body> 
+    <h1 class="page-title"><span>Bored</span><span class="R"> 'R </span><span>Us</span></h1>
+    <div id="selectionDiv">
+        <h2 class="selection-Div-Title">Random Activity Generator</h2>
+        <h3>Click to try a random activity:</h3>
+        <button id="ranActivity" class="btn">   ?   </button>
+        <div id="dropdownDiv">
+        <label class="dropdown" for="multiParticipantDropdown">Select a random activity for 1-4 participants</label>
+            <select id="multiParticipantDropdown" class="list">
+                <!-- These links will open a modal to a list of corresponding activities -->
+                <option class="option" value="1">1</option>
+                <option class="option" value="2">2</option>
+                <option class="option" value="3">3</option>
+                <option class="option" value="4">4</option>
+            </select>
+            <button type="submit" class="btn" id="multiParticipantDropdownBtn">Get Activity</button>
+            <div id="activityModal" class="modal">
+                <div class="modal-content">
+                    <span id="modalClose" class="close">&times;</span>
+                    <p id="activity"></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    <!-- <div id="formSelectionDiv">
+        <h2>Browse for activity</h2>
+        <h3>Select the number of participants:</h3>
+        <input type="range" min="1" max="4" id="rangeInput">
+        <h3>Select a type of activity: <button>  >  </button></h3>
+        // A list of activities will populate here for the user to highligh/select
+        <h3>Accessibility:</h3>
+        inpuy
+        <button class="btn" id="rangeGetActivityBtn">Find Activity</button>
+    </div>
+    <div id="displayDiv"></div> -->
 </body>
 </html>
